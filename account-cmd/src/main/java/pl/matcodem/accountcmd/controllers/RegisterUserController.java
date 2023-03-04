@@ -25,7 +25,7 @@ public class RegisterUserController {
     private final CommandGateway commandGateway;
 
     @PostMapping
-    public ResponseEntity<RegisterUserResponse> register(@Valid @RequestBody RegisterUserCommand command) {
+    public ResponseEntity<RegisterUserResponse> registerUser(@Valid @RequestBody RegisterUserCommand command) {
         String id = randomUUID().toString();
         command.setId(id);
         try {
