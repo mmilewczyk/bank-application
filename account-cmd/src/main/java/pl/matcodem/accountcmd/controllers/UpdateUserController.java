@@ -8,7 +8,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pl.matcodem.accountcmd.commands.UpdateUserCommand;
 import pl.matcodem.accountcmd.dto.BaseResponse;
-import pl.matcodem.accountcmd.dto.RegisterUserResponse;
 
 import static org.springframework.http.HttpStatus.*;
 
@@ -27,7 +26,7 @@ public class UpdateUserController {
             command.setId(id);
             commandGateway.send(command);
             var message = "User successfully updated!";
-            return new ResponseEntity<>(new RegisterUserResponse(id, message), OK);
+            return new ResponseEntity<>(new BaseResponse(message), OK);
         } catch (Exception e) {
             log.error(e.toString(), e);
             var safeErrorMessage = "Error while processing update user request for id - " + id;
