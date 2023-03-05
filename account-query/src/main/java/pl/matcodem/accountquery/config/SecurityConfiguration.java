@@ -1,4 +1,4 @@
-package pl.matcodem.accountcmd.config;
+package pl.matcodem.accountquery.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

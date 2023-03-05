@@ -15,10 +15,11 @@ import pl.matcodem.accountcmd.dto.RegisterUserResponse;
 import static java.util.UUID.randomUUID;
 import static org.springframework.http.HttpStatus.CREATED;
 import static org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR;
+import static pl.matcodem.accountcore.configuration.EndpointConstants.USERS_ENDPOINT_V1;
 
 @Slf4j
 @RestController
-@RequestMapping(path = "api/v1/user")
+@RequestMapping(path = USERS_ENDPOINT_V1)
 @RequiredArgsConstructor
 public class RegisterUserController {
 

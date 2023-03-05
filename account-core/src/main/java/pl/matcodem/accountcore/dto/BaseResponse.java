@@ -1,4 +1,4 @@
-package pl.matcodem.accountcmd.dto;
+package pl.matcodem.accountcore.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
