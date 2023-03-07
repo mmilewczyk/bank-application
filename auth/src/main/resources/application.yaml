@@ -1,0 +1,19 @@
+server:
+  port: 8084
+  error:
+    include-message: always
+
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: user
+security:
+  oauth2:
+    client:
+      client-id: bank-app
+      client-secret: alamakotaalamakota
+      signing-key: bankappsigningkey
+      token-validity-seconds: 300
+      refresh-token-validity-seconds: 1500

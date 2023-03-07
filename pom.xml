@@ -13,6 +13,7 @@
         <module>account-core</module>
         <module>account-cmd</module>
         <module>account-query</module>
+        <module>auth</module>
     </modules>
 
     <properties>
