@@ -9,3 +9,8 @@ spring:
       host: localhost
       port: 27017
       database: user
+
+security:
+  oauth2:
+    client:
+      signing-key: bankappsigningkey

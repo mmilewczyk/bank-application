@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.axonframework.messaging.responsetypes.ResponseTypes;
 import org.axonframework.queryhandling.QueryGateway;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import pl.matcodem.accountquery.dto.UserLookupResponse;
 import pl.matcodem.accountquery.queries.FindAllUsersQuery;
@@ -23,6 +24,7 @@ public class UserLookupController {
     private final QueryGateway queryGateway;
 
     @GetMapping
+    @PreAuthorize("hasAuthority('READ_PRIVILEGE')")
     public ResponseEntity<UserLookupResponse> getAllUsers() {
         try {
             var query = new FindAllUsersQuery();
@@ -39,6 +41,7 @@ public class UserLookupController {
     }
 
     @GetMapping("/{id}")
+    @PreAuthorize("hasAuthority('READ_PRIVILEGE')")
     public ResponseEntity<UserLookupResponse> getUserById(@PathVariable("id") String id) {
         try {
             var query = new FindUserByIdQuery(id);
@@ -55,6 +58,7 @@ public class UserLookupController {
     }
 
     @GetMapping("filter/{filter}")
+    @PreAuthorize("hasAuthority('READ_PRIVILEGE')")
     public ResponseEntity<UserLookupResponse> searchUsersByFilter(@PathVariable("filter") String filter) {
         try {
             var query = new SearchUsersQuery(filter);

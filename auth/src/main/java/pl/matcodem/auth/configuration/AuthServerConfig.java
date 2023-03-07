@@ -16,7 +16,6 @@ import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 
 @Configuration
 public class AuthServerConfig extends AuthorizationServerConfigurerAdapter {
-
     @Value("${security.oauth2.client.client-id}")
     private String clientId;
 
@@ -66,7 +65,8 @@ public class AuthServerConfig extends AuthorizationServerConfigurerAdapter {
 
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-        clients.inMemory()
+        clients
+                .inMemory()
                 .withClient(clientId)
                 .secret(new BCryptPasswordEncoder(12).encode(clientSecret))
                 .scopes("read", "write")
