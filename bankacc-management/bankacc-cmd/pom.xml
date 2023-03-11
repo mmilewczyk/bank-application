@@ -64,7 +64,7 @@
 
 		<dependency>
 			<groupId>pl.matcodem</groupId>
-			<artifactId>bankacc-cmd</artifactId>
+			<artifactId>bankacc-core</artifactId>
 			<version>1.0.0</version>
 		</dependency>
 	</dependencies>
