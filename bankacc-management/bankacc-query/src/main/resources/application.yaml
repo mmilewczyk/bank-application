@@ -1,0 +1,24 @@
+server:
+  port: 9092
+
+spring:
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://localhost:3306/bank
+    username: root
+    password: springbankRootPsw
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: bank
+
+security:
+  oauth2:
+    resource:
+      jwt:
+        key-value: bankappsigningkey
