@@ -18,7 +18,7 @@ import java.time.LocalDate;
 public class BankAccount {
 
     @Id
-    private Long id;
+    private String id;
     private String accountHolderId;
     private LocalDate creationDate;
     private AccountType accountType;
