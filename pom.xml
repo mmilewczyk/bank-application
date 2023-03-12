@@ -10,7 +10,6 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>auth</module>
         <module>api-gateway</module>
         <module>account-management</module>
         <module>bankacc-management</module>
