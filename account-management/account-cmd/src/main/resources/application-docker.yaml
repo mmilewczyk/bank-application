@@ -1,0 +1,21 @@
+server:
+  port: 8081
+  error:
+    include-message: always
+
+axon:
+  axonserver:
+    servers: axon-server
+
+spring:
+  data:
+    mongodb:
+      host: mongo-container
+      port: 27017
+      database: user
+
+security:
+  oauth2:
+    resource:
+      jwt:
+        key-value: bankappsigningkey
